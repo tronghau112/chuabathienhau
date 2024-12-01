@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
             line-height: 1.6;
             background-color: antiquewhite;
         }
+
         .header-image {
             height: 50vh;
             background: url('img/background.jpg') no-repeat center;
@@ -25,21 +27,95 @@
             justify-content: center;
             overflow: hidden;
         }
-        .header-image h1 { font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); }
-        .header-image p { font-size: 1.2rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
-        .panel { padding: 30px; background-color: #f8f9fa; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; margin-top: -50px; position: relative; z-index: 2; }
-        .panel h4 { color: #343a40; }
-        .panel p { color: #6c757d; }
-        .content-section { padding: 1% 23%; background: #f0f4f8; }
-        .content-section h2 { font-size: 2rem; margin-bottom: 20px; text-align: center; }
-        .tab-content p { font-size: 1rem; line-height: 1.8; color: #495057; text-align: justify; }
-        .footer { background-color: #343a40; color: white; padding: 40px 20px; }
-        .footer h4 { color: #f8f9fa; }
-        .footer p, .footer a { color: #adb5bd; font-size: 0.9rem; }
-        .footer .map iframe { border-radius: 10px; }
-        @media (max-width: 768px) { .header-image h1 { font-size: 2rem; } .header-image p { font-size: 1rem; } }
-        .my-carousel-container { position: relative; width: 100%; overflow: hidden; }
-        .my-carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+
+        .header-image h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .header-image p {
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .panel {
+            padding: 30px;
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .panel h4 {
+            color: #343a40;
+        }
+
+        .panel p {
+            color: #6c757d;
+        }
+
+        .content-section {
+            padding: 1% 23%;
+            background: #f0f4f8;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tab-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #495057;
+            text-align: justify;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer h4 {
+            color: #f8f9fa;
+        }
+
+        .footer p,
+        .footer a {
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+
+        .footer .map iframe {
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .header-image h1 {
+                font-size: 2rem;
+            }
+
+            .header-image p {
+                font-size: 1rem;
+            }
+        }
+
+        .my-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .my-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
         .my-carousel-item img {
             width: 90%;
             height: 100%;
@@ -48,23 +124,30 @@
             margin-top: 10px;
             margin-left: 1vw;
         }
-        .my-carousel-button { 
-            position: absolute; 
-            top: 50%; 
-            transform: translateY(-50%); 
+
+        .my-carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             background-color: rgba(0, 0, 0, 0.5);
-            color: white; 
-            border: none; 
+            color: white;
+            border: none;
             font-size: 100%;
             cursor: pointer;
-            padding: 1%; 
-            z-index: 10; 
+            padding: 1%;
+            z-index: 10;
         }
-        .my-carousel-button.prev { left: 10px; }
-        .my-carousel-button.next { right: 10px; }
 
-         /* Navbar */
-         .navbar {
+        .my-carousel-button.prev {
+            left: 10px;
+        }
+
+        .my-carousel-button.next {
+            right: 10px;
+        }
+
+        /* Navbar */
+        .navbar {
             position: fixed;
             top: 0;
             left: 0;
@@ -132,299 +215,505 @@
             color: #f0a500;
         }
 
-
         .image-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            flex-wrap: nowrap;
+            padding: 10px 0;
         }
 
         .image-container img {
-            max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của container */
-            height: auto;    /* Giữ tỷ lệ hình ảnh */
+            flex: 1 1 auto;
+            max-width: 16%;
+            height: auto;
+            margin: 0 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        
+        .modal-body iframe {
+            max-height: 500px;
+        }
+
+        @media (max-width: 1024px) {
+            .image-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .image-container img {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+            .modal-dialog {
+                max-width: 100% !important;
+            }
         }
 
     </style>
 </head>
-<body>
-    <nav class="navbar">
-        <i class="fas fa-bars hamburger" id="hamburger"></i>
-    </nav>
 
-    <!-- Side Navigation -->
-    <div class="side-nav" id="sideNav">
-        <ul>
-            <li><a href="#page1-content">Lịch sử chùa bà Thiên Hậu</a></li>
-            <li><a href="#page2-content">Kiến trúc của chùa bà Thiên Hậu </a></li>
-            <li><a href="#page3-content">Hình ảnh và mô tả về 2 vị thần canh giữ và video sự tích bà Thiên Hậu </a></li>
-            <li><a href="#page4-content">Hình ảnh về phong tục xin xăm </a></li>
-            <li><a href="#page5-content">Video về phong tục rót đèn dầu</a></li>
-            <li><a href="#page6-content">Hình ảnh về cổ vật tại chùa</a></li>
-        </ul>
-    </div>
+<body>
     <!-- Header -->
-    <div class="header-image"></div>
+    <div class="header-image">
+        <h2 style="font-size: 35px;">CHÙA BÀ THIÊN HẬU</h2>
+    </div>
     <div class="container panel mt-4">
         <div class="col-md-12 text-center">
-            <h1 style="font-size: 5rem;">Chùa bà Thiên Hậu</h1>
+            <h1 style="font-size: 5rem;" >Chùa bà Thiên Hậu</h1>
             <br>
             <h4><i class="fas fa-clock"></i> Thời gian hoạt động</h4>
             <p>Thứ 2 - thứ 7: 6:30 AM - 16:30 PM</p>
         </div>
     </div>
-    
-    <div class="container panel mt-4">
-        <div class="tab-content" id="tabContent">
-            <!-- Tab Pane 1 -->
-            <div class="tab-pane fade show active" id="page1-content" role="tabpanel" aria-labelledby="page1-tab">
-                <!-- Carousel 1 -->
-                <div class="my-carousel-container">
-                    <button class="my-carousel-button prev">&lt;</button>
-                    <div class="my-carousel-track">
-                        <div class="my-carousel-item">
-                            <img src="img/main/1.jpg" alt="Image 1">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/2.jpg" alt="Image 2">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/3.jpg" alt="Image 3">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/4.jpg" alt="Image 4">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/5.jpg" alt="Image 5">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/6.jpg" alt="Image 6">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/7.jpg" alt="Image 7">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/8.jpg" alt="Image 8">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/main/9.jpg" alt="Image 9">
-                        </div>
-                    </div>
-                    <button class="my-carousel-button next">&gt;</button>
-                </div>
-                <br>
-                <p>Chùa bà Thiên Hậu là tên gọi hiện đại ngày nay. Tuy nhiên, đối với những người dân sinh sống lâu năm tại đây, họ vẫn quen gọi ngôi cổ tự này là miếu Thiên Hậu. Chùa được xây dựng vào khoảng năm 1760 với kiến trúc theo lối cổ kính, trầm mặc.</p>
-                <p>Mặc dù đã trải qua nhiều lần sửa sang, trùng tu. Tuy nhiên đến chùa du khách vẫn có thể cảm nhận được rõ nét dấu tích xưa còn đọng lại nơi đây. Chùa cũng vinh dự được công nhận là Di tích kiến trúc nghệ thuật cấp Quốc gia vào ngày 7/1/1993.</p>
-            </div>
 
-            <!-- Tab Pane 2 -->
-            <div class="tab-pane fade" id="page2-content" role="tabpanel" aria-labelledby="page2-tab">
-                <p>Miếu Bà Thiên Hậu có cấu trúc mặt bằng dạng chữ Quốc và được chia làm 3 dãy gồm tiền điện, trung điện và hậu điện. Dọc hai bên miếu là Hội quán Tuệ Thành và trường học.</p>
-                <p><strong>• Nóc miếu:</strong></p>
-                <p>
-                    Nóc miếu được trang trí nhiều hoa văn, hình nhân bằng chất liệu gốm sứ được sản xuất từ lò Bửu Nguyên và Đồng Hòa. 
-                    Trong đó có cảnh “bái tổ vinh quy”, “đả võ đài”, mô tuýp “lưỡng long tranh châu”. 
-                    Cùng với đó là hình ảnh tiên nữ, tiên đồng với hàng chữ “Hòa hợp nhị tiên”.
-                </p> 
-                <div class="image-container">
-                    <img src="img/page2/1.jpg" alt="Image description">
-                </div>
-                <br>
-                <p><strong>• Tiền điện:</strong></p>
-                <p>
-                    Hai bên cửa vào của tiền điện được đặt hai trang thờ. Bên phải thờ Phúc Đức Chánh Thần, bên trái thờ Thần Cửa. 
-                    Ngoài ra, tiền điện chùa Bà Thiên Hậu còn có bức tranh lớn vẽ cảnh bà hiển linh trên sóng nước cùng bia đá ghi lại truyền thuyết về Thiên Hậu Thánh Mẫu. 
-                    Bia công đức đặt tại tiền điện ghi lại sự đóng góp trùng tu chùa vào các đợi như: Đạo Quang thứ 8, Đạo Quang thứ 10, Hàm Phong cửu niên…
-                </p> 
-                <div class="image-container">
-                    <img src="img/page2/2.jpg" alt="Image description">
-                </div>
-                <br>
-                <p><strong>• Trung điện:</strong></p>
-                <p>
-                    Trung điện chùa Bà Thiên Hậu được đặt bộ lư phát lam niên hiệu Quang Tự thứ 12. 
-                    So với bộ lưu được đặt ở các miếu khác trong thành phố, bộ lư tại miếu Thiên Hậu là lớn nhất. 
-                    Ngoài ra, tiền điện còn có kiệu lớn được sơn son thếp vàng bằng gỗ để rước Bà trong ngày vía.
-                    Cùng với đó là bức hoành phi “Hàm Hoằng Quang Đại”.
-                </p> 
-                <div class="image-container">
-                    <img src="img/page2/3.jpg" alt="Image description">
-                </div>
-                <br>
-                <p><strong>• Hậu điện:</strong></p>
-                <p>
-                    Hậu điện của miếu là gian chính đặt thờ Thiên Hậu Thánh Mẫu. 
-                    Trên trang thờ có 3 tượng lớn. Trong đó bức tượng lớn nhất để dùng vào dịp vía bà, cung nghinh ra sân cho bà ngự lãm lễ hội; 
-                    tượng giữa được đặt trên trang thờ, còn tượng dưới cùng được đặt vào kiệu các ngày lễ hội đưa đi diễu hành quanh các khu phố.
-                </p> 
-                <div class="image-container">
-                    <img src="img/page2/4.jpg" alt="Image description">
-                </div>
-                <br>
-                <div class="image-container">
-                    <iframe  width="545" height="320" src="https://drive.google.com/file/d/10kO5JFFotRi0EkM03pTBwrk6rr1OkVM_/preview" width="600" height="480">
-                    </iframe>
-                </div>
-                <br>
-            </div>
-
-            <!-- Tab Pane 3 -->
-            <div class="tab-pane fade" id="page3-content" role="tabpanel" aria-labelledby="page3-tab">
-                <div class="image-container">
-                    <img src="img/page3/1.jpg" alt="Image description">
-                </div>
-                <br>
-                <div class="image-container">
-                    <img src="img/page3/2.jpg" alt="Image description">
-                </div>
-                <br>
-                <div class="image-container">
-                    <iframe  width="545" height="320" src="https://drive.google.com/file/d/1GLaTgm4n7bnxHCa0m8Ra_nAXvo--JDu4/preview" width="600" height="480">
-                    </iframe>
-                </div>
-                <br>
-            </div>
-
-              <!-- Tab Pane 4 -->
-            <div class="tab-pane fade" id="page4-content" role="tabpanel" aria-labelledby="page4-tab">
-                <div class="image-container">
-                    <img src="img/page4/1.jpg" alt="Image description">
-                </div>
-                <br>
-                <div class="image-container">
-                    <img src="img/page4/2.jpg" alt="Image description">
-                </div>
-            </div>
-
-            <!-- Tab Pane 5 -->
-            <div class="tab-pane fade" id="page5-content" role="tabpanel" aria-labelledby="page5-tab">
-                <br>
-                <div class="image-container">
-                    <iframe  width="545" height="320" src="https://drive.google.com/file/d/1GyzZjhq6IDB5xHDwCNGY30MBhn65MBZr/preview" width="600" height="480">
-                    </iframe>
-                </div>
-                <br>
-            </div>
-    
-            <!-- Tab Pane 6 -->
-            <div class="tab-pane fade" id="page6-content" role="tabpanel" aria-labelledby="page6-tab">
-                <p>Không chỉ sở hữu kiến trúc độc đáo mà chùa Bà Thiên Hậu còn là nơi lưu giữ nhiều bảo vật quý. 
-                    Theo đó tại chùa hiện còn có khoảng 400 hiện vật cổ trong đó có 6 tượng đá, 7 pho tượng thần, 9 bia đã, 10 bức hoành, 2 chuông nhỏ, 41 tranh đối và 23 câu đối.
-                </p>
-                <p>
-                    Các cổ vật này được chế tác tỉ mỉ, công phu với các đường nét tinh tế. 
-                    Ngoài ra, miếu Thiên Hậu còn có một số pháp khí như: lư trầm, đỉnh trầm, hư hương bằng đá sa thạch… được người Hoa thành kính Bà dâng cúng.
-                </p>
-
-                <div class="my-carousel-container">
-                    <button class="my-carousel-button prev">&lt;</button>
-                    <div class="my-carousel-track">
-                        <div class="my-carousel-item">
-                            <img src="img/page6/1.jpg" alt="Page6 Image 1">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/2.jpg" alt="Page6 Image 2">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/3.jpg" alt="Page6 Image 3">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/4.jpg" alt="Page6 Image 4">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/5.jpg" alt="Page6 Image 5">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/6.jpg" alt="Page6 Image 6">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/7.jpg" alt="Page6 Image 7">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/8.jpg" alt="Page6 Image 8">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/9.jpg" alt="Page6 Image 9">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/10.jpg" alt="Page6 Image 10">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/11.jpg" alt="Page6 Image 11">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/12.jpg" alt="Page6 Image 12">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/13.jpg" alt="Page6 Image 13">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/14.jpg" alt="Page6 Image 14">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/15.jpg" alt="Page6 Image 15">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/16.jpg" alt="Page6 Image 16">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/17.jpg" alt="Page6 Image 17">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/18.jpg" alt="Page6 Image 18">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/19.jpg" alt="Page6 Image 19">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/20.jpg" alt="Page6 Image 20">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/21.jpg" alt="Page6 Image 21">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/22.jpg" alt="Page6 Image 22">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/23.jpg" alt="Page6 Image 23">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/24.jpg" alt="Page6 Image 24">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/25.jpg" alt="Page6 Image 25">
-                        </div>
-                        <div class="my-carousel-item">
-                            <img src="img/page6/26.jpg" alt="Page6 Image 26">
-                        </div>
-                    </div>
-                    <button class="my-carousel-button next">&gt;</button>
-                </div>
-            </div>
-
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Chùa bà Thiên Hậu</h1>
+        <div class="image-container">
+            <img src="img/page2/1.jpg" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
+            <img src="img/page3/1.jpg" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
+            <img src="img/page2/3.jpg" alt="Image 3" data-bs-toggle="modal" data-bs-target="#imageModal3">
+            <img src="img/page2/4.jpg" alt="Image 4" data-bs-toggle="modal" data-bs-target="#imageModal4">
+            <img src="img/page2/1.jpg" alt="Image 5" data-bs-toggle="modal" data-bs-target="#imageModal5">
+            <img src="img/page3/1.jpg" alt="Image 6" data-bs-toggle="modal" data-bs-target="#imageModal6">
         </div>
-        <!-- Tabs Navigation -->
-        <ul class="nav nav-pills justify-content-center mt-4" id="contentTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="page1-tab" data-bs-toggle="pill" data-bs-target="#page1-content" type="button" role="tab" aria-controls="page1-content" aria-selected="true">1</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="page2-tab" data-bs-toggle="pill" data-bs-target="#page2-content" type="button" role="tab" aria-controls="page2-content" aria-selected="false">2</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="page3-tab" data-bs-toggle="pill" data-bs-target="#page3-content" type="button" role="tab" aria-controls="page3-content" aria-selected="false">3</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="page4-tab" data-bs-toggle="pill" data-bs-target="#page4-content" type="button" role="tab" aria-controls="page4-content" aria-selected="false">4</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="page5-tab" data-bs-toggle="pill" data-bs-target="#page5-content" type="button" role="tab" aria-controls="page5-content" aria-selected="false">5</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="page6-tab" data-bs-toggle="pill" data-bs-target="#page6-content" type="button" role="tab" aria-controls="page6-content" aria-selected="false">6</button>
-            </li>
-        </ul>
     </div>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel1">LỊCH SỬ CỦA HÌNH THÀNH CHÙA BÀ THIÊN HẬU</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <iframe width="545" height="320"
+                        src="https://drive.google.com/file/d/10kO5JFFotRi0EkM03pTBwrk6rr1OkVM_/preview">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+        <div style="max-width: 70%;"  id="imageModal2" class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel2">Image 2 Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal21">
+                                </div>
+                                <p>Column 1</p>
+                            </div>
+                            <div class="col-2">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal22">
+                                </div>
+                                <p>Column 2</p>
+                            </div>
+                            <div class="col-2">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal23">
+                                </div>
+                                <p>Column 3</p>
+                            </div>
+                            <div class="col-2">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal24">
+                                </div>
+                                <p>Column 4</p>
+                            </div>
+                            <div class="col-2">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                    style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                    data-bs-target="#nestedModal25">
+                                </div>
+                                <p>Column 5</p>
+                            </div>
+                            <div class="col-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 21 -->
+    <div class="modal fade" id="nestedModal21" tabindex="-1" aria-labelledby="nestedModalLabel21" aria-hidden="true"
+        data-parent-modal="imageModal2">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel21">Nested Modal for Image 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: justify;">
+                                    Learning a new language opens up a world of opportunities and benefits.
+                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
+                                    multitasking, and memory retention.
+                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
+                                    to connect with people from
+                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
+                                    improves career prospects
+                                    by increasing employability and opening doors to international job opportunities.
+                                    Moreover, it boosts confidence
+                                    and self-esteem as learners overcome challenges and achieve fluency in a new
+                                    language. Overall, the benefits of
+                                    learning a new language extend beyond communication skills, enriching one's personal
+                                    and professional life in myriad ways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 22 -->
+    <div class="modal fade" id="nestedModal22" tabindex="-1" aria-labelledby="nestedModalLabel22" aria-hidden="true"
+        data-parent-modal="imageModal2">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel22">Nested Modal for Image 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: justify;">
+                                    Learning a new language opens up a world of opportunities and benefits.
+                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
+                                    multitasking, and memory retention.
+                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
+                                    to connect with people from
+                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
+                                    improves career prospects
+                                    by increasing employability and opening doors to international job opportunities.
+                                    Moreover, it boosts confidence
+                                    and self-esteem as learners overcome challenges and achieve fluency in a new
+                                    language. Overall, the benefits of
+                                    learning a new language extend beyond communication skills, enriching one's personal
+                                    and professional life in myriad ways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 23 -->
+    <div class="modal fade" id="nestedModal23" tabindex="-1" aria-labelledby="nestedModalLabel23" aria-hidden="true"
+        data-parent-modal="imageModal2">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel23">Nested Modal for Image 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="my-carousel-container">
+                                <button class="my-carousel-button prev">&lt;</button>
+                                <div class="my-carousel-track">
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/1.jpg" alt="Image 1">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/2.jpg" alt="Image 2">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/3.jpg" alt="Image 3">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/4.jpg" alt="Image 4">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/5.jpg" alt="Image 5">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/6.jpg" alt="Image 6">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/7.jpg" alt="Image 7">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/8.jpg" alt="Image 8">
+                                    </div>
+                                    <div class="my-carousel-item">
+                                        <img src="img/main/9.jpg" alt="Image 9">
+                                    </div>
+                                </div>
+                                <button class="my-carousel-button next">&gt;</button>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 24 -->
+    <div class="modal fade" id="nestedModal24" tabindex="-1" aria-labelledby="nestedModalLabel24" aria-hidden="true"
+        data-parent-modal="imageModal2">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel24">Nested Modal for Image 4</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: justify;">
+                                    Learning a new language opens up a world of opportunities and benefits.
+                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
+                                    multitasking, and memory retention.
+                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
+                                    to connect with people from
+                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
+                                    improves career prospects
+                                    by increasing employability and opening doors to international job opportunities.
+                                    Moreover, it boosts confidence
+                                    and self-esteem as learners overcome challenges and achieve fluency in a new
+                                    language. Overall, the benefits of
+                                    learning a new language extend beyond communication skills, enriching one's personal
+                                    and professional life in myriad ways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 25 -->
+    <div class="modal fade" id="nestedModal25" tabindex="-1" aria-labelledby="nestedModalLabel25" aria-hidden="true"
+        data-parent-modal="imageModal2">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel25">Nested Modal for Image 5</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: justify;">
+                                    Learning a new language opens up a world of opportunities and benefits.
+                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
+                                    multitasking, and memory retention.
+                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
+                                    to connect with people from
+                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
+                                    improves career prospects
+                                    by increasing employability and opening doors to international job opportunities.
+                                    Moreover, it boosts confidence
+                                    and self-esteem as learners overcome challenges and achieve fluency in a new
+                                    language. Overall, the benefits of
+                                    learning a new language extend beyond communication skills, enriching one's personal
+                                    and professional life in myriad ways.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel3">Image 3 Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal31">
+                                </div>
+                                <p>Column 1</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;" data-bs-toggle="modal"
+                                        data-bs-target="#nestedModal32">
+                                </div>
+                                <p>Column 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal (Con của Modal Cha) -->
+    <div class="modal fade" id="nestedModal3" tabindex="-1" aria-labelledby="nestedModalLabel3" aria-hidden="true"
+        data-parent-modal="imageModal3">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel3">Nested Modal for Image 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Details about Image 3.</p>
+                    <img src="img/page2/3.jpg" alt="Nested Image 3" class="img-fluid"
+                        style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4-->
+    <div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel4">Image 4 Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="my-carousel-container">
+                        <button class="my-carousel-button prev">&lt;</button>
+                        <div class="my-carousel-track">
+                            <div class="my-carousel-item">
+                                <img src="img/main/1.jpg" alt="Image 1">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/2.jpg" alt="Image 2">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/3.jpg" alt="Image 3">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/4.jpg" alt="Image 4">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/5.jpg" alt="Image 5">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/6.jpg" alt="Image 6">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/7.jpg" alt="Image 7">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/8.jpg" alt="Image 8">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/main/9.jpg" alt="Image 9">
+                            </div>
+                        </div>
+                        <button class="my-carousel-button next">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5-->
+    <div class="modal fade" id="imageModal5" tabindex="-1" aria-labelledby="imageModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel5">Image 5 Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/page3/1.jpg" alt="Image 5" style="max-width: 100%; height: auto;">
+                    <p>Description for Image 5.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6-->
+    <div class="modal fade" id="imageModal6" tabindex="-1" aria-labelledby="imageModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel6">Image 6 Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/page2/3.jpg" alt="Image 6" style="max-width: 100%; height: auto;">
+                    <p>Description for Image 6.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <br>
     <div class="footer">
         <div class="row">
@@ -432,23 +721,36 @@
                 <div class="map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.731073964073!2d106.666505315334!3d10.754666992334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efb5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2s710%20Nguy%E1%BB%85n%20Tr%C3%A3i%2C%20Ph%C6%B0%E1%BB%9Dng%2011%2C%20Qu%E1%BA%ADn%205%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1681625297898!5m2!1svi!2s"
-                        width="100%"
-                        height="200"
-                        allowfullscreen=""
-                        loading="lazy"
-                        ></iframe>
+                        width="100%" 
+                        height="200" 
+                        allowfullscreen="" 
+                        loading="lazy"></iframe>
                 </div>
             </div>
             <div class="col-md-6">
                 <h4>Liên hệ</h4>
                 <p>Địa chỉ: 710 Nguyễn Trãi, phường 11, Quận 5, Hồ Chí Minh, Ho Chi Minh City, Vietnam</p>
                 <p>SĐT: 028.629.88668 - 0908.421.461</p>
-                <p><a href="https://www.facebook.com/ChuaBaThienHauChoLon" target="_blank" rel="noopener noreferrer">https://www.facebook.com/ChuaBaThienHauChoLon</a></p>
+                <p><a href="https://www.facebook.com/ChuaBaThienHauChoLon" target="_blank"
+                        rel="noopener noreferrer">https://www.facebook.com/ChuaBaThienHauChoLon</a></p>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".modal").forEach(modal => {
+                modal.addEventListener("hidden.bs.modal", function () {
+                    const parentModalId = this.getAttribute("data-parent-modal");
+                    if (parentModalId) {
+                        const parentModal = bootstrap.Modal.getOrCreateInstance(document.getElementById(parentModalId));
+                        parentModal.show();
+                    }
+                });
+            });
+        });
+
         document.querySelectorAll('.my-carousel-button').forEach(button => {
             button.addEventListener('click', () => {
                 const carousel = button.closest('.my-carousel-container');
@@ -480,50 +782,7 @@
             });
         });
 
-        document.querySelectorAll('.side-nav a').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            // Activate corresponding tab
-            const tabButton = document.querySelector(`[data-bs-target="#${targetId}"]`);
-            if (tabButton) {
-                tabButton.click(); // Trigger Bootstrap tab
-            }
-
-            // Scroll to section
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const sideNav = document.getElementById('sideNav');
-
-    hamburger.addEventListener('click', () => {
-        sideNav.classList.toggle('active');
-    });
-
-    // Close side navigation on link click
-    sideNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            sideNav.classList.remove('active');
-        });
-    });
-
-    // Change navbar style on scroll
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
     </script>
 </body>
+
 </html>
