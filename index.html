@@ -252,14 +252,35 @@
                 max-width: 100% !important;
             }
         }
-
+        a:hover {
+            cursor:pointer;
+            color:#adb5bd !important;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar">
+        <i class="fas fa-bars hamburger" id="hamburger"></i>
+    </nav>
+
+    <!-- Side Navigation -->
+    <div class="side-nav" id="sideNav">
+        <ul>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal1">Lịch sử chùa bà Thiên Hậu</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal2">Nét đặc trưng kiến trúc bên trong chùa bà Thiên Hậu</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal3">Nét đẹp về phong tục truyền thống</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal4">Cổ vật có tại chùa bà Thiên Hậu</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal5">Hiện trạng phát triển chùa bà Thiên Hậu</a></li>
+            <li><a data-bs-toggle="modal" data-bs-target="#imageModal6">Bài báo cáo</a></li>
+        </ul>
+    </div>
+
     <!-- Header -->
     <div class="header-image">
         <h2 style="font-size: 35px;">CHÙA BÀ THIÊN HẬU</h2>
+        <br>
+        <h3>Nơi linh thiêng mang vẻ đẹp cổ kính</h3>
     </div>
     <div class="container panel mt-4">
         <div class="col-md-12 text-center">
@@ -271,7 +292,6 @@
     </div>
 
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Chùa bà Thiên Hậu</h1>
         <div class="image-container">
             <img src="img/page2/1.jpg" alt="Image 1" data-bs-toggle="modal" data-bs-target="#imageModal1">
             <img src="img/page3/1.jpg" alt="Image 2" data-bs-toggle="modal" data-bs-target="#imageModal2">
@@ -287,7 +307,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel1">LỊCH SỬ CỦA HÌNH THÀNH CHÙA BÀ THIÊN HẬU</h5>
+                    <h5 class="modal-title" id="imageModalLabel1">LỊCH SỬ HÌNH THÀNH CHÙA BÀ THIÊN HẬU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -304,11 +324,21 @@
         <div style="max-width: 70%;"  id="imageModal2" class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel2">Image 2 Preview</h5>
+                    <h5 class="modal-title" id="imageModalLabel2">NÉT ĐẶC TRƯNG KIẾN TRÚC BÊN TRONG CHÙA BÀ THIÊN HẬU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
+                        <div class="row" style="margin-left: 7.5%; margin-right: 7.5%;">
+                            <p>
+                                Chùa Bà Thiên Hậu được xây dựng theo phong cách Á Đông thuần khiết, 
+                                từ lối kiến trúc Tam quan, phần mái cách điệu, các các bức tường có phù điêu bằng gốm nung và hai hành lang hai bên. 
+                                Tất cả đều gợi lên những giá trị lâu đời và phồn vinh của văn hóa Trung Hoa, 
+                                Chùa xây dựng theo lối kiến trúc hình ấn bao gồm tổ hợp bốn gian nhà liên kết nhau tạo thành mặt bằng giống hình chữ “khẩu” hoặc chữ “quốc”.
+                                  Ở giữa ba dãy nhà tạo thành là tiền điện, trung điện và hậu điện, các dãy nhà này có một khoảng trống gọi là thiên tỉnh, 
+                                  hay còn được gọi là giếng trời giúp không gian chùa thoáng đãng, đủ ảnh sáng và chỗ thoát khói hương.
+                            </p>
+                        </div>
                         <div class="row text-center">
                             <div class="col-1">
                             </div>
@@ -318,7 +348,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal21">
                                 </div>
-                                <p>Column 1</p>
+                                <b>Tiền điện</b>
                             </div>
                             <div class="col-2">
                                 <div class="image-container">
@@ -326,7 +356,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal22">
                                 </div>
-                                <p>Column 2</p>
+                                <p>Khu Thiên đỉnh (Giếng trời)</p>
                             </div>
                             <div class="col-2">
                                 <div class="image-container">
@@ -334,7 +364,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal23">
                                 </div>
-                                <p>Column 3</p>
+                                <p>Trung điện</p>
                             </div>
                             <div class="col-2">
                                 <div class="image-container">
@@ -342,7 +372,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal24">
                                 </div>
-                                <p>Column 4</p>
+                                <p>Hương đình</p>
                             </div>
                             <div class="col-2">
                                 <div class="image-container">
@@ -350,7 +380,7 @@
                                     style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                     data-bs-target="#nestedModal25">
                                 </div>
-                                <p>Column 5</p>
+                                <p>Đại điện</p>
                             </div>
                             <div class="col-1">
                             </div>
@@ -367,7 +397,7 @@
         <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel21">Nested Modal for Image 3</h5>
+                    <h5 class="modal-title" id="nestedModalLabel21">Tiền điện</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -381,19 +411,9 @@
                             </div>
                             <div class="col-8">
                                 <p style="text-align: justify;">
-                                    Learning a new language opens up a world of opportunities and benefits.
-                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
-                                    multitasking, and memory retention.
-                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
-                                    to connect with people from
-                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
-                                    improves career prospects
-                                    by increasing employability and opening doors to international job opportunities.
-                                    Moreover, it boosts confidence
-                                    and self-esteem as learners overcome challenges and achieve fluency in a new
-                                    language. Overall, the benefits of
-                                    learning a new language extend beyond communication skills, enriching one's personal
-                                    and professional life in myriad ways.
+                                    Hai bên cửa vào tiền điện được đặt hai trang thờ, bàn thờ Phúc Đức Chánh bên phải,
+                                    bàn thờ Môn Quan Vương Tả được đặt bên trái. Hai bia đá ghi lại truyền thuyết về Thiên Hậu Thánh Mẫu và 
+                                    các bức tranh lớn vẽ cảnh bà hiển linh trên sóng nước. Các bia công đức đặt tại tiền điện ghi lại sự đóng góp trùng tu chùa.
                                 </p>
                             </div>
                         </div>
@@ -409,7 +429,7 @@
         <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel22">Nested Modal for Image 3</h5>
+                    <h5 class="modal-title" id="nestedModalLabel22">Khu Thiên đỉnh (Giếng trời)</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -423,19 +443,13 @@
                             </div>
                             <div class="col-8">
                                 <p style="text-align: justify;">
-                                    Learning a new language opens up a world of opportunities and benefits.
-                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
-                                    multitasking, and memory retention.
-                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
-                                    to connect with people from
-                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
-                                    improves career prospects
-                                    by increasing employability and opening doors to international job opportunities.
-                                    Moreover, it boosts confidence
-                                    and self-esteem as learners overcome challenges and achieve fluency in a new
-                                    language. Overall, the benefits of
-                                    learning a new language extend beyond communication skills, enriching one's personal
-                                    and professional life in myriad ways.
+                                    Khu vực giữa tòa nhà là Thiên đỉnh tạo không gian thoáng đãng, 
+                                    hướng tay phải chúng ta sẽ thấy thấy trên nóc, diềm mái, hiên, 
+                                    vách tường có một số tượng gốm có niên đại năm Quang tự thứ 34 do nghệ nhân 
+                                    Trung Quốc dùng vật liệu tại chỗ và sản xuất từ lò gốm Bửu Nguyên trên đất Sài Gòn xưa. 
+                                    Các tượng, phù điêu này được tạo tác dựa theo các điển tích cổ Trung Quốc như Tam Quốc Chí, 
+                                    Đông Chu Liệt Quốc... và được bố trí hài hòa với các hình tượng khác như "tứ linh" (long, lân, quy, phụng), 
+                                    "lưỡng long tranh châu", "bái tổ vinh quy"… 
                                 </p>
                             </div>
                         </div>
@@ -451,11 +465,20 @@
         <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel23">Nested Modal for Image 3</h5>
+                    <h5 class="modal-title" id="nestedModalLabel23">Trung điện</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="container">
+                        <div class="row">
+                            <p>
+                                Trung điện chùa Bà Thiên Hậu được đặt bộ lư Phát lan vào năm 1886 niên hiệu Quang Tự thứ 12. 
+                                So với bộ lưu được đặt ở các miếu khác trong thành phố, bộ lư tại miếu Thiên Hậu là lớn nhất. 
+                                Ngoài ra, tiền điện còn có kiệu lớn được sơn son thếp vàng bằng gỗ để rước Bà trong ngày vía. 
+                                Cùng với đó là bức hoành phi “Hàm Hoằng Quang Đại” bằng chữ cổ có niên đại thứ 5 Gia Khánh, 
+                                đời Thanh (1800) nhân dịp trùng tu Hội quán.
+                            </p>
+                        </div>
                         <div class="row text-center">
                             <div class="my-carousel-container">
                                 <button class="my-carousel-button prev">&lt;</button>
@@ -504,7 +527,7 @@
         <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel24">Nested Modal for Image 4</h5>
+                    <h5 class="modal-title" id="nestedModalLabel24">Hương đình</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -518,19 +541,11 @@
                             </div>
                             <div class="col-8">
                                 <p style="text-align: justify;">
-                                    Learning a new language opens up a world of opportunities and benefits.
-                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
-                                    multitasking, and memory retention.
-                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
-                                    to connect with people from
-                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
-                                    improves career prospects
-                                    by increasing employability and opening doors to international job opportunities.
-                                    Moreover, it boosts confidence
-                                    and self-esteem as learners overcome challenges and achieve fluency in a new
-                                    language. Overall, the benefits of
-                                    learning a new language extend beyond communication skills, enriching one's personal
-                                    and professional life in myriad ways.
+                                    Nơi đây có đặt 5 lư hương có niên đại đời vua Quang Tự đều trên 100 năm. 
+                                    Bên trên là khu vực treo nhang vòng khá độc đáo và lạ mắt. 
+                                    Trước đây nhang có đường kính từ 1m - 1m2, sau khi thực hiện chỉ thị của Trung ương khoanh nhang này được thu nhỏ lại chỉ còn 35 cm. 
+                                    Trong đợt trùng tu gần nhất, những cây xà gồ dưới mái ngói và 4 cây cột gỗ bên ngoài là gỗ lim, loại gỗ quý hiếm sản xuất tại phía 
+                                    Bắc trong đợt trùng tu vừa qua gần như đã thay đổi toàn bộ.
                                 </p>
                             </div>
                         </div>
@@ -546,7 +561,7 @@
         <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel25">Nested Modal for Image 5</h5>
+                    <h5 class="modal-title" id="nestedModalLabel25">Đại điện</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -560,19 +575,12 @@
                             </div>
                             <div class="col-8">
                                 <p style="text-align: justify;">
-                                    Learning a new language opens up a world of opportunities and benefits.
-                                    Firstly, it enhances cognitive abilities such as problem-solving skills,
-                                    multitasking, and memory retention.
-                                    Secondly, it fosters cultural appreciation and understanding, allowing individuals
-                                    to connect with people from
-                                    diverse backgrounds on a deeper level. Additionally, being bilingual or multilingual
-                                    improves career prospects
-                                    by increasing employability and opening doors to international job opportunities.
-                                    Moreover, it boosts confidence
-                                    and self-esteem as learners overcome challenges and achieve fluency in a new
-                                    language. Overall, the benefits of
-                                    learning a new language extend beyond communication skills, enriching one's personal
-                                    and professional life in myriad ways.
+                                    Đại điện của chùa là gian chính nơi đặt bàn thờ Thiên Hậu Thánh Mẫu gồm ba gian. 
+                                    Gian giữa thờ bà Thiên Hậu cao 1m được tạc từ khối cổ cỗ, bên trái thờ Kim Hoa Nương Nương, 
+                                    bên phải thờ Long Mẫu Nương Nương. Hai bên gian phụ đặt các tượng thờ Quan Thánh, Địa Tạng và Thần Tài. 
+                                    Tại gin chính còn đặt đại hồng chung bằng gang có niên đại 1975 và 1850. Ngoài ra, Chùa Bà Thiên Hậu lưu giữ nhiều tranh đắp nổi hình 
+                                    Long, Ly, Quy, Phụng. Trên mái hiên, vách tường và nóc nhà có tượng, phù điêu bằng gốm dựa trên những điển tích Trung Quốc. 
+                                    Chùa Bà Thiên Hậu không chỉ là một điểm hành hương mà còn là một biểu tượng của sự kết hợp hoàn hảo giữa tín ngưỡng và nghệ thuật kiến trúc.
                                 </p>
                             </div>
                         </div>
@@ -588,7 +596,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel3">Image 3 Preview</h5>
+                    <h5 class="modal-title" id="imageModalLabel3">NÉT ĐẸP VỀ PHONG TỤC TRUYỀN THỐNG</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -600,7 +608,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal31">
                                 </div>
-                                <p>Column 1</p>
+                                <p>PHONG TỤC XIN XĂM</p>
                             </div>
                             <div class="col-6">
                                 <div class="image-container">
@@ -608,7 +616,7 @@
                                         style="max-width: 100%; height: auto;" data-bs-toggle="modal"
                                         data-bs-target="#nestedModal32">
                                 </div>
-                                <p>Column 2</p>
+                                <p>PHONG TỤC RÓT ĐÈN DẦU</p>
                             </div>
                         </div>
                     </div>
@@ -617,19 +625,53 @@
         </div>
     </div>
 
-    <!-- Nested Modal (Con của Modal Cha) -->
-    <div class="modal fade" id="nestedModal3" tabindex="-1" aria-labelledby="nestedModalLabel3" aria-hidden="true"
-        data-parent-modal="imageModal3">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <!-- Nested Modal 31 -->
+        <div class="modal fade" id="nestedModal31" tabindex="-1" aria-labelledby="nestedModalLabel31" aria-hidden="true" data-parent-modal="imageModal3">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="nestedModalLabel3">Nested Modal for Image 3</h5>
+                    <h5 class="modal-title" id="nestedModalLabel31">PHONG TỤC XIN XĂM</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="img/page2/1.jpg" alt="Image 2" class="img-fluid"
+                                        style="max-width: 100%; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <p style="text-align: justify;">
+                                    Một trong những phong tục khi du khách đến chùa Bà Thiên Hậu đó là xin xăm, xin quẻ, cầu nguyện những điều tốt đẹp cho bản thân 
+                                    và gia đình. Mỗi thẻ xăm sẽ có “bài thẻ” dự đoán vận mệnh và tương lai của bản thân người xin. Theo phong tục, người dân sau khi 
+                                    dâng lễ xong tại chùa xong có thể xin xăm bằng cách lắc mạnh ống gỗ đựng các quẻ xăm cho đến khi có một chiếc thẻ rơi ra ngoài, 
+                                    khi đó người dân sẽ rút một chiếc thẻ xăm và nhờ người trong chùa giải thích. Những quẻ thẻ thường làm bằng tre có ghi số hiệu 
+                                    hoặc ghi một câu ngắn gọn bằng tiếng Hán. Người dân có thể xem được vận mệnh tương lai, công việc cho bản thân và gia đình. 
+                                    Lâu dần, xin xăm trở thành một nét đẹp văn hóa tâm linh tại chùa Bà Thiên Hậu.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nested Modal 32 -->
+    <div class="modal fade" id="nestedModal32" tabindex="-1" aria-labelledby="nestedModalLabel32" aria-hidden="true"
+        data-parent-modal="imageModal3">
+        <div  class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nestedModalLabel32">PHONG TỤC RÓT ĐÈN DẦU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <p>Details about Image 3.</p>
-                    <img src="img/page2/3.jpg" alt="Nested Image 3" class="img-fluid"
-                        style="max-width: 100%; height: auto;">
+                    <iframe width="545" height="320"
+                        src="https://drive.google.com/file/d/10kO5JFFotRi0EkM03pTBwrk6rr1OkVM_/preview">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -640,7 +682,7 @@
         <div class="modal-dialog modal-dialog-centered  modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel4">Image 4 Preview</h5>
+                    <h5 class="modal-title" id="imageModalLabel4">CỔ VẬT CÓ TẠI CHÙA BÀ THIÊN HẬU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -648,31 +690,46 @@
                         <button class="my-carousel-button prev">&lt;</button>
                         <div class="my-carousel-track">
                             <div class="my-carousel-item">
-                                <img src="img/main/1.jpg" alt="Image 1">
+                                <img src="img/page2d4/1.jpg" alt="Image 1">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/2.jpg" alt="Image 2">
+                                <img src="img/page2d4/2.jpg" alt="Image 2">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/3.jpg" alt="Image 3">
+                                <img src="img/page2d4/3.jpg" alt="Image 3">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/4.jpg" alt="Image 4">
+                                <img src="img/page2d4/4.jpg" alt="Image 4">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/5.jpg" alt="Image 5">
+                                <img src="img/page2d4/5.jpg" alt="Image 5">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/6.jpg" alt="Image 6">
+                                <img src="img/page2d4/6.jpg" alt="Image 6">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/7.jpg" alt="Image 7">
+                                <img src="img/page2d4/7.jpg" alt="Image 7">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/8.jpg" alt="Image 8">
+                                <img src="img/page2d4/8.jpg" alt="Image 8">
                             </div>
                             <div class="my-carousel-item">
-                                <img src="img/main/9.jpg" alt="Image 9">
+                                <img src="img/page2d4/9.jpg" alt="Image 9">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/page2d4/10.jpg" alt="Image 10">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/page2d4/11.jpg" alt="Image 11">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/page2d4/12.jpg" alt="Image 12">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/page2d4/13.jpg" alt="Image 13">
+                            </div>
+                            <div class="my-carousel-item">
+                                <img src="img/page2d4/14.jpg" alt="Image 14">
                             </div>
                         </div>
                         <button class="my-carousel-button next">&gt;</button>
@@ -687,12 +744,13 @@
         <div class="modal-dialog modal-dialog-centered  modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel5">Image 5 Preview</h5>
+                    <h5 class="modal-title" id="imageModalLabel5">HIỆN TRẠNG PHÁT TRIỂN CHÙA BÀ THIÊN HẬU</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="img/page3/1.jpg" alt="Image 5" style="max-width: 100%; height: auto;">
-                    <p>Description for Image 5.</p>
+                    <iframe width="545" height="320"
+                        src="https://drive.google.com/file/d/10kO5JFFotRi0EkM03pTBwrk6rr1OkVM_/preview">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -703,7 +761,7 @@
         <div class="modal-dialog modal-dialog-centered  modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageModalLabel6">Image 6 Preview</h5>
+                    <h5 class="modal-title" id="imageModalLabel6">BÀI BÁO CÁO</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -782,6 +840,37 @@
             });
         });
 
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const sideNav = document.getElementById('sideNav');
+
+        hamburger.addEventListener('click', () => {
+            sideNav.classList.toggle('active');
+        });
+
+        // Close side navigation on link click
+        sideNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sideNav.classList.remove('active');
+            });
+        });
+        
+        // Close sideNav when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (sideNav.classList.contains('active') && !sideNav.contains(event.target) && event.target !== hamburger) {
+                sideNav.classList.remove('active');
+            }
+        });
+        
+        // Change navbar style on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 
