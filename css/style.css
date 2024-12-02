@@ -98,47 +98,6 @@ body {
     }
 }
 
-.my-carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.my-carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.my-carousel-item img {
-    width: 96%;
-    height: 100%;
-    object-fit: cover;
-    margin-right: 10vw;
-    margin-top: 10px;
-    margin-left: 1vw;
-}
-
-.my-carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 100%;
-    cursor: pointer;
-    padding: 1%;
-    z-index: 10;
-}
-
-.my-carousel-button.prev {
-    left: 10px;
-}
-
-.my-carousel-button.next {
-    right: 10px;
-}
-
 /* Navbar */
 .navbar {
     position: fixed;
@@ -298,4 +257,73 @@ a:hover {
 
 .side-nav ul li ul li {
     margin-bottom: 8px;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 80%;  
+    height: 0;
+    padding-bottom: 50%; 
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+.my-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.my-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+/* Nút Next và Prev */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    transform: translate(0, -50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
