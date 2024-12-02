@@ -264,3 +264,38 @@ a:hover {
     overflow: hidden;
 }
 
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav ul li {
+    margin: 10px 0;
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.side-nav ul li a:hover {
+    color: #f0a500;
+}
+
+.side-nav ul li ul {
+    list-style-type: none;
+    padding-left: 20px; 
+    margin: 0;
+}
+
+.side-nav ul li ul li a {
+    padding-left: 30px; 
+}
+
+.side-nav ul li ul li {
+    margin-bottom: 8px;
+}
