@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÁO CÁO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .header-image {
+            background: url('/img/rp.jpg') no-repeat center;
+            background-size: cover;
+            background-position: center 73%;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <i class="fas fa-bars hamburger" id="hamburger"></i>
+    </nav>
+
+    <!-- Side Navigation -->
+    <div class="side-nav " id="sideNav">
+        <ul>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="introduce.html">NÉT ĐẶC TRƯNG KIẾN TRÚC BÊN TRONG</a></li>
+            <li>
+                <a href="architecturalfeatures.html">NÉT ĐẶC TRƯNG KIẾN TRÚC BÊN TRONG</a>
+                <ul>
+                    <li><a href="td.html">TIỀN ĐIỆN</a></li>
+                    <li><a href="ktd.html">KHU THIÊN ĐỈNH <br> (GIẾNG TRỜI)</a></li>
+                    <li><a href="trgd.html">TRUNG ĐIỆN</a></li>
+                    <li><a href="hd.html">HƯƠNG ĐÌNH </a></li>
+                    <li><a href="dd.html">ĐẠI ĐIỆN </a></li>
+                </ul>
+            </li>
+            <li><a href="pttt.html">VẺ ĐẸP TỪ PHONG TỤC TRUYỀN THỐNG </a></li>
+            <li><a href="htpt.html">HIỆN TRẠNG PHÁT TRIỂN </a></li>
+            <li><a href="covat.html">CỔ VẬT</a></li>
+            <li><a href="report.html">BÁO CÁO</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header-image" >
+        <h2 style="font-size: 3rem; color: #000;">BÁO CÁO</h2>
+        <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".modal").forEach(modal => {
+                modal.addEventListener("hidden.bs.modal", function () {
+                    const parentModalId = this.getAttribute("data-parent-modal");
+                    if (parentModalId) {
+                        const parentModal = bootstrap.Modal.getOrCreateInstance(document.getElementById(parentModalId));
+                        parentModal.show();
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.my-carousel-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const carousel = button.closest('.my-carousel-container');
+                const track = carousel.querySelector('.my-carousel-track');
+                const items = track.querySelectorAll('.my-carousel-item');
+                const direction = button.classList.contains('next') ? 'next' : 'prev';
+                const itemWidth = items[0].offsetWidth + 15;
+                const trackWidth = track.scrollWidth;
+                const containerWidth = carousel.offsetWidth;
+
+                let currentTranslate = parseInt(track.dataset.translate || 0, 10);
+
+                if (direction === 'next') {
+                    if (Math.abs(currentTranslate) + containerWidth < trackWidth) {
+                        currentTranslate -= itemWidth;
+                    } else {
+                        currentTranslate = 0;
+                    }
+                } else {
+                    if (currentTranslate < 0) {
+                        currentTranslate += itemWidth;
+                    } else {
+                        currentTranslate = -(trackWidth - containerWidth);
+                    }
+                }
+
+                track.dataset.translate = currentTranslate;
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const sideNav = document.getElementById('sideNav');
+
+        hamburger.addEventListener('click', () => {
+            sideNav.classList.toggle('active');
+        });
+
+        // Close side navigation on link click
+        sideNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sideNav.classList.remove('active');
+            });
+        });
+        
+        // Close sideNav when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (sideNav.classList.contains('active') && !sideNav.contains(event.target) && event.target !== hamburger) {
+                sideNav.classList.remove('active');
+            }
+        });
+
+        // Change navbar style on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
