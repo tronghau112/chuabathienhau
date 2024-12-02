@@ -21,6 +21,8 @@ body {
     overflow: hidden;
 }
 
+
+
 .header-image h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -326,4 +328,16 @@ a:hover {
     100% {
         opacity: 0;
     }
+}
+
+.box {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 5px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
