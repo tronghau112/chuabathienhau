@@ -2,14 +2,14 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: antiquewhite;
-    background: url('../../img/background.jpg');
+    background: url('../img/background.jpg');
     background-size: auto;
     background-repeat: repeat;
 }
 
 .header-image {
     height: 100vh;
-    background: url('../../img/header.jpg') no-repeat center;
+    background: url('../img/header.jpg') no-repeat center;
     background-size: cover;
     background-position: center 73%;
     position: relative;
@@ -252,7 +252,7 @@ a:hover {
 
 .header-image {
     height: 100vh;
-    background: url('../../img/header.jpg') no-repeat center;
+    background: url('../img/header.jpg') no-repeat center;
     background-size: cover;
     background-position: center 73%;
     position: relative;
